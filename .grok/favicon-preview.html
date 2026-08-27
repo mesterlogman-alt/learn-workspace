@@ -1,0 +1,15 @@
+<!doctype html><html><body style="margin:0;background:#777">
+<div style="display:flex;gap:16px;padding:16px;align-items:end">
+  <img id="s16" src='data:image/svg+xml;charset=utf-8,' width=16 height=16>
+  <img id="s32" src='data:image/svg+xml;charset=utf-8,' width=32 height=32>
+  <img id="s64" src='data:image/svg+xml;charset=utf-8,' width=64 height=64>
+</div>
+<script>
+const s16 = document.getElementById('s16');
+const s32 = document.getElementById('s32');
+const s64 = document.getElementById('s64');
+fetch('favicon-16.png').then(r=>r.blob()).then(b=>{s16.src=URL.createObjectURL(b)});
+fetch('favicon-32.png').then(r=>r.blob()).then(b=>{s32.src=URL.createObjectURL(b)});
+fetch('favicon-64.png').then(r=>r.blob()).then(b=>{s64.src=URL.createObjectURL(b)});
+</script>
+</body></html>
